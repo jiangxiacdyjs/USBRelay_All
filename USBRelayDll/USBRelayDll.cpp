@@ -26,6 +26,7 @@ JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SystemInit
 (JNIEnv *, jclass)
 {
 	return usb_relay_init();
+
 	cout << "SystemInit" << endl;
 
 }
