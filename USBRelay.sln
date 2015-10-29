@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USBRelay", "USBRelay\USBRelay.vcxproj", "{2119988F-4BEA-426A-B074-B1C2D2801C57}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JNITestDll", "JNITestDll\JNITestDll.vcxproj", "{757AF4FF-675F-48A7-8237-5D2F10167BB2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "USBRelayDll", "USBRelayDll\USBRelayDll.vcxproj", "{B33079A2-05BE-4196-83BC-C363FE8C2259}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Debug|x64.ActiveCfg = Debug|Win32
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Debug|x86.ActiveCfg = Debug|Win32
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Debug|x86.Build.0 = Debug|Win32
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Release|x64.ActiveCfg = Release|Win32
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Release|x86.ActiveCfg = Release|Win32
+		{2119988F-4BEA-426A-B074-B1C2D2801C57}.Release|x86.Build.0 = Release|Win32
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Debug|x64.ActiveCfg = Debug|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Debug|x64.Build.0 = Debug|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Debug|x86.ActiveCfg = Debug|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Debug|x86.Build.0 = Debug|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Release|x64.ActiveCfg = Release|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Release|x64.Build.0 = Release|x64
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Release|x86.ActiveCfg = Release|Win32
+		{757AF4FF-675F-48A7-8237-5D2F10167BB2}.Release|x86.Build.0 = Release|Win32
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Debug|x64.ActiveCfg = Debug|x64
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Debug|x64.Build.0 = Debug|x64
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Debug|x86.ActiveCfg = Debug|Win32
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Debug|x86.Build.0 = Debug|Win32
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Release|x64.ActiveCfg = Release|x64
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Release|x64.Build.0 = Release|x64
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Release|x86.ActiveCfg = Release|Win32
+		{B33079A2-05BE-4196-83BC-C363FE8C2259}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
