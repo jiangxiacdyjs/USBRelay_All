@@ -20,19 +20,19 @@ extern "C" {
 
 	/*
 	* Class:     indi_whc_webandcv_Java2Cpp
-	* Method:    GetDeviceSerialNum
-	* Signature: ()I
+	* Method:    SetDeviceSerialNum
+	* Signature: (Ljava/lang/String;)I
 	*/
-	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_GetDeviceSerialNum
-		(JNIEnv *, jclass);
+	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SetDeviceSerialNum
+		(JNIEnv *, jclass, jstring);
 
 	/*
 	* Class:     indi_whc_webandcv_Java2Cpp
-	* Method:    GetRelayNum
-	* Signature: ()I
+	* Method:    SetRelayNum
+	* Signature: (I)I
 	*/
-	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_GetRelayNum
-		(JNIEnv *, jclass);
+	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SetRelayNum
+		(JNIEnv *, jclass, jint);
 
 	/*
 	* Class:     indi_whc_webandcv_Java2Cpp
@@ -49,6 +49,7 @@ extern "C" {
 	*/
 	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_CloseRelay
 		(JNIEnv *, jclass, jint, jint);
+
 	/*
 	* Class:     indi_whc_webandcv_Java2Cpp
 	* Method:    FindDevice
@@ -60,11 +61,17 @@ extern "C" {
 	/*
 	* Class:     indi_whc_webandcv_Java2Cpp
 	* Method:    SelectDevice
-	* Signature: ()I
+	* Signature: (I)I
 	*/
 	JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SelectDevice
-		(JNIEnv *env, jclass);
-
+		(JNIEnv *, jclass, jint);
+	/*
+	* Class:     indi_whc_webandcv_Java2Cpp
+	* Method:    CloseDevice
+	* Signature: (I)I
+	*/
+	JNIEXPORT void JNICALL Java_indi_whc_webandcv_Java2Cpp_CloseDevice
+		(JNIEnv *, jclass, jint);
 
 #ifdef __cplusplus
 }

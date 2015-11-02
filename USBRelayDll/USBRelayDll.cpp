@@ -26,31 +26,29 @@ JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SystemInit
 (JNIEnv *, jclass)
 {
 	return usb_relay_init();
-	//yiliuchuifeng
-	// 14555
 	cout << "SystemInit" << endl;
 
 }
-JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_GetDeviceSerialNum
-(JNIEnv *, jclass)
+JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SetDeviceSerialNum
+(JNIEnv *env, jclass, jstring SerialNum)
 {
 	cout << "|               请输入设备序列号                 |" << endl;
-	getline(cin, inputbuffer);
-	char serial_number[10];
-	strcpy_s(serial_number, inputbuffer.c_str());
+	//getline(cin, inputbuffer);
+	//strcpy_s(serial_number, inputbuffer.c_str());
+	const char *serial_number = env ->GetStringUTFChars(SerialNum,NULL);	 	
 	hd = usb_relay_device_open_with_serial_number(serial_number, strlen(serial_number));
 	cout << serial_number << endl;
 	return hd;
 }
 
-JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_GetRelayNum
-(JNIEnv *, jclass)
+JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SetRelayNum
+(JNIEnv *, jclass, jint relay)
 {
 	cout << "|           请输入需要操作的继电器序号           |" << endl;
-	getline(cin, inputbuffer);
-	int relay_index;
-	relay_index = atoi(inputbuffer.c_str());
-	return relay_index;
+	//getline(cin, inputbuffer);
+	//int relay_index;
+	//relay_index = atoi(inputbuffer.c_str());
+	return relay;
 }
 JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_OpenRelay
 (JNIEnv *, jclass, jint hd, jint relay_index)
@@ -140,13 +138,19 @@ JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_FindDevice
 }
 
 JNIEXPORT jint JNICALL Java_indi_whc_webandcv_Java2Cpp_SelectDevice
-(JNIEnv *, jclass)
+(JNIEnv *, jclass, jint device)
 {
 	cout << "|                      请选择设备：                       |" << endl;
-	getline(cin, inputbuffer);
-	int device_index = atoi(inputbuffer.c_str());
-	wstring SerialNum = mapNumToSeria[device_index];
+	//getline(cin, inputbuffer);
+	//int device_index = atoi(inputbuffer.c_str());
+	wstring SerialNum = mapNumToSeria[device];
 	wcout << SerialNum << endl;
-	hd = usb_relay_device_open(m_mapIndexToDevice[mapNumToSeria[device_index]]);
+	hd = usb_relay_device_open(m_mapIndexToDevice[mapNumToSeria[device]]);
 	return hd;
+}
+
+JNIEXPORT void JNICALL Java_indi_whc_webandcv_Java2Cpp_CloseDevice
+(JNIEnv *, jclass, jint device_h)
+{
+	 usb_relay_device_close(device_h);
 }
