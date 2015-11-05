@@ -15,7 +15,7 @@ std::map<std::wstring, struct usb_relay_device_info*> m_mapIndexToDevice;
 
 std::map<int, std::wstring> mapNumToSeria;
 int state = 0;//0--主界面 1--输入设备序列号 2--输入继电器序号
-string inputbuffer;//输入寄存器
+string inputbuffer;//输入寄存
 
 int result;
 int hd;
